@@ -15,4 +15,5 @@ RUN set -x ;\
     busybox=1.33.1-r3 \
   ;\
   /bin/busybox --install ;\
-  echo "INFO: end RUN" ;\
+  echo "INFO: end RUN"
+
