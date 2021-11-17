@@ -1,2 +1,3 @@
-include: '/3m-common/github/workflows/ci.yml'
+include:
+  - local: '/3m-common/github/workflows/ci.yml'
 
