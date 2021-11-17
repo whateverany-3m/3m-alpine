@@ -10,11 +10,11 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
     - name: env
-      run: 3m-common/scripts/env.sh --TARGET_VERSION="${GITHUB_REF:10}" --TARGET_BUILD="${{ github.run_number }}" --TARGET_REGISTRY_TOKEN="${{ secrets.TARGET_REGISTRY_TOKEN }}" --TARGET_REGISTRY_USER="${{ github.actor }}" --GITHUB_ENV="${GITHUB_ENV}"
+      run: ./3m-common/scripts/env.sh --TARGET_VERSION="${GITHUB_REF:10}" --TARGET_BUILD="${{ github.run_number }}" --TARGET_REGISTRY_TOKEN="${{ secrets.TARGET_REGISTRY_TOKEN }}" --TARGET_REGISTRY_USER="${{ github.actor }}" --GITHUB_ENV="${GITHUB_ENV}"
     - name: preaction
-      run: 3m-common/scripts/preaction.sh
+      run: ./3m-common/scripts/preaction.sh
     - name: runaction
-      run: 3m-common/scripts/runaction.sh
+      run: ./3m-common/scripts/runaction.sh
     - name: postaction
-      run: 3m-commona/scripts/postaction.sh
+      run: ./3m-commona/scripts/postaction.sh
 
