@@ -13,8 +13,9 @@ jobs:
       run: |
         set -x
         pwd
-        ls -al
-        ls -al ./3m-common/scripts
+        ls -al || true
+        ls -al ./3m-common || true
+        ls -al ./3m-common/scripts || true
         TARGET_VERSION="${GITHUB_REF:10}" TARGET_BUILD="${{ github.run_number }}" TARGET_REGISTRY_TOKEN="${{ secrets.TARGET_REGISTRY_TOKEN }}" ARGET_REGISTRY_USER="${{ github.actor }}" GITHUB_ENV="${GITHUB_ENV}" ./3m-common/scripts/env.sh 
     - name: preaction
       run: ./3m-common/scripts/preaction.sh
