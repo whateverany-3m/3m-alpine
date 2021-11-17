@@ -1,3 +1,9 @@
+name: ci
+on:  
+  push:
+    tags:
+      - '*'
+
 include:
   - local: '/3m-common/github/workflows/ci.yml'
 
