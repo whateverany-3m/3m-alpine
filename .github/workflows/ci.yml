@@ -18,5 +18,5 @@ jobs:
     - name: run_action
       run: ./3m-common/scripts/run_action.sh
     - name: post_action
-      run: ./3m-commona/scripts/post_action.sh
+      run: ./3m-common/scripts/post_action.sh
 
